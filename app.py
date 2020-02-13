@@ -14,9 +14,9 @@ def index():
 @app.route('/dronks', methods=['GET', 'POST'])
 def dronks():
     if request.method == 'POST':
-        requests.post(endpoint,data=request.json)
+        requests.post(endpoint, data=request.json)
         return request.json
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=80)
